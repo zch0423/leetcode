@@ -7,9 +7,12 @@
 # @lc code=start
 class Solution:
     def readBinaryWatch(self, num: int) -> List[str]:
+        # enumerate
         results = []
-        for i in range(min(5, num+1)):
-            if 
-
+        for h in range(12):
+            for m in range(60):
+                if bin(h).count('1')+bin(m).count('1')==num:
+                    results.append(f"{h}:{m:02d}")
+        return results
 # @lc code=end
 
